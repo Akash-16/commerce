@@ -22,7 +22,8 @@ function getProviderName() {
 
 function withCommerceConfig(nextConfig = {}) {
   const commerce = nextConfig.commerce || {}
-  const name = commerce.provider || getProviderName()
+  // const name = commerce.provider || getProviderName();
+  const name = 'bigcommerce'
 
   if (!name) {
     throw new Error(
