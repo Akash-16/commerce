@@ -1,9 +1,11 @@
 import { FC } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Logo, Container } from '@components/ui'
 import { Searchbar, UserNav } from '@components/common'
 import NavbarRoot from './NavbarRoot'
 import s from './Navbar.module.css'
+// import Logos from '../../../public/logo.png'
 
 const Navbar: FC = () => (
   <NavbarRoot>
@@ -11,8 +13,9 @@ const Navbar: FC = () => (
       <div className="relative flex flex-row justify-between py-4 align-center md:py-6">
         <div className="flex items-center flex-1">
           <Link href="/">
-            <a className={s.logo} aria-label="Logo">
-              <Logo />
+            <a aria-label="Logo">
+              {/* <Logo /> */}
+              <img src="/logo.png" alt="Picture of the author" width="80px" />
             </a>
           </Link>
           <nav className="hidden ml-6 space-x-4 lg:block">
